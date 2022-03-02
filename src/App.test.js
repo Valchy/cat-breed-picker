@@ -114,36 +114,30 @@ describe('Main entry point App', () => {
 		useImageStateSpy.mockImplementation(() => 'loaded');
 	});
 
-	it('should not break when rendering App component', () => {
+	it('Should not break when rendering App component', () => {
 		render(<App />);
 		expect(screen.getByTestId('main')).toBeVisible();
 	});
 
-	it('should render cats', () => {
+	it('Should render cats in select menu', () => {
 		render(<App />);
-
 		expect(screen.getByTestId('select').childElementCount).toBe(MOCK_DATA.length + 1);
-
-		// expect() expect to dropdown to have 2 cat breeeds
 	});
 
-	it('should change the selected cat on changing the select element', () => {
+	it('Should change the selected cat breed upon clicking a new select option', () => {
 		render(<App />);
 		expect(screen.getByTestId('cat-image')).toHaveAttribute('alt', 'default cat');
 		fireEvent.change(screen.getByTestId('select'), { target: { value: 'abys' } });
-
 		expect(screen.getByTestId('cat-image')).toHaveAttribute('alt', 'abys');
-
-		// when it changes we need to expect it to change the selected cat
 	});
 });
 
-describe('randomArrayElement function', () => {
+describe('RandomArrayElement function', () => {
 	it('should return one random element from array', () => {
 		expect(randomArrayElement([1, 3, 45, 6, 22, 4, 61, 2, 343])).not.toBeNaN();
 	});
 
-	it('should return null if empty array', () => {
+	it('Should return null if empty array', () => {
 		expect(randomArrayElement([])).toBeNull();
 	});
 });
