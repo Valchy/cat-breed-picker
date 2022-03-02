@@ -108,7 +108,7 @@ const MOCK_DATA = [
 const useGetCatBreedsSpy = jest.spyOn(useGetCatBreedsImports, 'useGetCatBreeds');
 const useImageStateSpy = jest.spyOn(useImageStateImports, 'useImageState');
 
-describe('Main entry point App', () => {
+describe('Main entry point for App', () => {
 	beforeEach(() => {
 		useGetCatBreedsSpy.mockImplementation(() => MOCK_DATA);
 		useImageStateSpy.mockImplementation(() => 'loaded');
