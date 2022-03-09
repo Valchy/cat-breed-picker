@@ -1,7 +1,7 @@
 # Cat Breed Picker
 
 Small application to view all the different cat breeds.  
-View the app online at [https://cats.valchy.com](https://cats.valchy.com)
+View the app online at [https://cat-breed-picker.valchy.com](https://cat-breed-picker.valchy.com)
 
 ## Installation (create-react-app)
 
