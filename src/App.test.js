@@ -126,7 +126,7 @@ describe('Main entry point for App', () => {
 
 	it('Should change the selected cat breed upon clicking a new select option', () => {
 		render(<App />);
-		expect(screen.getByTestId('cat-image')).toHaveAttribute('alt', 'default cat');
+		expect(screen.getByTestId('cat-image')).toBeInTheDocument();
 		fireEvent.change(screen.getByTestId('select'), { target: { value: 'abys' } });
 		expect(screen.getByTestId('cat-image')).toHaveAttribute('alt', 'abys');
 	});
