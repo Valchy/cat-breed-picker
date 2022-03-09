@@ -48,7 +48,7 @@ function App() {
 
 			{/* Cat Image / default, loading or selected */}
 			{!selectedBreed ? (
-				<img style={{ margin: '25px 0' }} width="200" data-testid="cat-image" src="./cat.png" alt="default cat" />
+				<></>
 			) : imageState === 'loaded' ? (
 				<img
 					style={{ margin: '25px 0' }}
